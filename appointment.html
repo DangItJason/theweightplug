@@ -77,9 +77,11 @@
                             <h2>Schedule an appointment</h2>
                             <p>Can't make it today? Message us back on the day you can pick up and we'll let you know our availability.</p>
                         </div>
-                        <form class="register-form" name='submit-to-google-sheet' onSubmit="setTimeout(function(){window.location.reload();},10);">
+                        <form class="register-form" name='submit-to-google-sheet' onSubmit="setTimeout(function(){window.open('thanks.html', '_blank');},10);">
                             <!--Hidden Fields-->
-                            <!--Custom Header Subject-->                            
+                            <!--Custom Header Subject-->         
+                            <input type="hidden" NAME="redirect" value="google.com">       
+
                             <input type="hidden" name="_subject" value="New Appointment">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -123,10 +125,10 @@
                                 </div>  
                                 <div class="col-lg-6">
                                     <label for="day">Appointment Day</label>
-                                    <input type="text" id="day" name="day" placeholder="ex. Today (7/17), Monday (7/18)">
+                                    <input type="date" id="day" name="day" placeholder="ex. Today (7/17), Monday (7/18)">
                                 </div>
                             </div>
-                            <button type="submit" class="register-btn" name="submit">Book Now</button>
+                            <button type="submit" class="register-btn" name="submit" onClick="redirect();">Book Now</button>
                         </form>
                     </div>
                 </div>
@@ -176,9 +178,9 @@
         })
     </script>
     <script>
-    function refreshPage(){
-        window.location.reload();
-    } 
+        function redirect() {
+            location.replace = "google.com";
+        }
     </script>
 
     <!-- Js Plugins -->
