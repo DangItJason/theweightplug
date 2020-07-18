@@ -1851,6 +1851,9 @@ ul, ol {
 	.hero-text h1 {
 		font-size: 42px;
 	}
+	.hero-section p {
+		padding-top: 250px;
+	}
 	.single-trainer-item .trainer-text {
 		width: 284px;
 		-webkit-transform: translateX(-142px);

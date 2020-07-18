@@ -64,7 +64,7 @@
     $(".classes-slider").owlCarousel({
         items: 3,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         loop: true,
         smartSpeed: 1200,
         responsive: {
