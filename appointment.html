@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description">
+    <meta name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>theweightplug</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="./appointment.html" class="primary-btn signup-btn">Book Now</a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Half-Hero Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="img/gym-wallpaper-5.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Book Now</h2>
+                        <div class="breadcrumb-option">
+                            <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                            <span>Book Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Half-Hero Section End -->
+
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="register-text">
+                        <div class="section-title">
+                            <h2>Schedule an appointment</h2>
+                            <p>Can't make it today? Message us back on the day you can pick up and we'll let you know our availability.</p>
+                        </div>
+                        <form class="register-form" name='submit-to-google-sheet' onSubmit="setTimeout(function(){window.location.reload();},10);">
+                            <!--Hidden Fields-->
+                            <!--Custom Header Subject-->                            
+                            <input type="hidden" name="_subject" value="New Appointment">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="email">Your email address</label>
+                                    <input type="text" id="email" name="email">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="phone">Mobile No*</label>
+                                    <input type="text" id="phone" name="phone">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="message">Your message</label>
+                                    <input type="text" id="message" name="message">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="weights">I'm interested in weight plates and dumbbells</label>
+                                    <input type="checkbox" id="weights" name="weights">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="equipment">I'm interested in benches, power racks and barbells</label>
+                                    <input type="checkbox" id="equipment" name="equipment">
+                                </div>
+                                 <div class="col-lg-6">
+                                    <label for="matts">I'm interested in floor matts</label>
+                                    <input type="checkbox" id="floor matts" name="matts">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="browse">I just want to browse</label>
+                                    <input type="checkbox" id="browse" name="browse">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="time">Appointment Time</label><br>
+                                    <select name="time" id="time">
+                                        <option value="morning">11AM - 2PM</option>
+                                        <option value="afternoon">5PM - 8PM</option>
+                                    </select>
+                                </div>  
+                                <div class="col-lg-6">
+                                    <label for="day">Appointment Day</label>
+                                    <input type="text" id="day" name="day" placeholder="ex. Today (7/17), Monday (7/18)">
+                                </div>
+                            </div>
+                            <button type="submit" class="register-btn" name="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!--scripts--->
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwlf-Pb4qfvTC0kwVrGooq-UBwhx6oC7gMVh3WSVVrnbx9pu_0-/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+    function refreshPage(){
+        window.location.reload();
+    } 
+    </script>
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
