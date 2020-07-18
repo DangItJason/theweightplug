@@ -1899,3 +1899,19 @@ ul, ol {
 		margin-right: 10px;
 	}
 }
+
+/* Owl Buttons */
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  left: -2rem;
+}
+
+.owl-next {
+  right: -2rem;
+}

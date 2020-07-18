@@ -1,12 +1,3 @@
-/*  ---------------------------------------------------
-    Template Name: Gutim
-    Description: Gutim Fitness HTML Template
-    Author: Colorlib
-    Author URI: http://colorlib.com
-    Version: 1.0
-    Created: Colorlib
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
@@ -62,11 +53,12 @@
 		Class Slider
     ----------------------- */
     $(".classes-slider").owlCarousel({
+        nav: true,
+        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         items: 3,
         dots: true,
         autoplay: false,
         loop: true,
-        smartSpeed: 1200,
         responsive: {
             0: {
                 items: 1,
