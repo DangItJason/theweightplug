@@ -768,11 +768,28 @@ ul, ol {
 	background: #ffffff;
 	margin-right: -15px;
 }
-.register-text .register-form label {
+
+.register-text .register-form #center {
 	font-size: 14px;
 	color: #9b9b9b;
 	margin-bottom: 11px;
+	text-align: center;
 }
+
+.register-text .register-form #center-children {
+	display: inline-block;
+	text-align: left;
+}
+
+.register-text .register-form #checkbox label {
+	font-size: 14px;
+	color: #9b9b9b;
+	margin-bottom: 11px;
+	display: inline-block;
+	width: 140px;
+	text-align: right;
+}
+
 .register-text .register-form input {
 	width: 100%;
 	height: 46px;
@@ -782,6 +799,18 @@ ul, ol {
 	color: #9b9b9b;
 	margin-bottom: 18px;
 }
+
+.register-text .register-form #checkbox input{
+	width: 25%;
+	height: 35px;
+	border: 1px solid #ebebeb;
+	padding-left: 1000px;
+	font-size: 14px;
+	color: #9b9b9b;
+	margin-bottom: 18px;
+	display: inline-block;
+}
+
 .register-text .register-form .register-btn {
 	font-size: 16px;
 	color: #ffffff;

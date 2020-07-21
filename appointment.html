@@ -101,20 +101,8 @@
                                     <input type="text" id="message" name="message">
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="weights">I'm interested in weight plates and dumbbells</label>
-                                    <input type="checkbox" id="weights" name="weights">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="equipment">I'm interested in benches, power racks and barbells</label>
-                                    <input type="checkbox" id="equipment" name="equipment">
-                                </div>
-                                 <div class="col-lg-6">
-                                    <label for="matts">I'm interested in floor matts</label>
-                                    <input type="checkbox" id="floor matts" name="matts">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="browse">I just want to browse</label>
-                                    <input type="checkbox" id="browse" name="browse">
+                                    <label for="day">Appointment Day</label>
+                                    <input type="date" id="day" name="day" placeholder="ex. Today (7/17), Monday (7/18)">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="time">Appointment Time</label><br>
@@ -123,11 +111,38 @@
                                         <option value="afternoon">5PM - 8PM</option>
                                     </select>
                                 </div>  
-                                <div class="col-lg-6">
-                                    <label for="day">Appointment Day</label>
-                                    <input type="date" id="day" name="day" placeholder="ex. Today (7/17), Monday (7/18)">
-                                </div>
                             </div>
+                            <div id="center">
+                                <div clas="col-lg-12" id="">
+                                    <label></label>
+                                    <label>I'm interested in:</label>
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="weight_plates">Weight Plates</label>
+                                    <input type="checkbox" id="weight_plates" name="weight_plates">
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="dumbbells">Dumbbells</label>
+                                    <input type="checkbox" id="dumbbells" name="dumbbells">
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="barbells">Barbells / Specialty Bars</label>
+                                    <input type="checkbox" id="barbells" name="barbells">
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="benches_powerracks">Benches / Power Racks</label>
+                                    <input type="checkbox" id="benches_powerracks" name="benches_powerracks">
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="matts">Floor Matts </label>
+                                    <input type="checkbox" id="floor matts" name="matts">
+                                </div>
+                                <div class="col-lg-12" id="checkbox">
+                                    <label for="browse">I just want to browse</label>
+                                    <input type="checkbox" id="browse" name="browse">
+                                </div>
+
+                            </div class="row">
                             <button type="submit" class="register-btn" name="submit" onClick="redirect();">Book Now</button>
                         </form>
                     </div>
